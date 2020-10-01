@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '2o1a%lbtks#=a=%_#3p9qdp43ch4n*!(^vuyjxxwk_cfx(=%t$'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -89,7 +89,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'puppy_store_drf',
-        'USER': 'postgres',
+        'USER': os.environ.get('POSTGRES'),
         'PASSWORD': os.environ.get('PSQL'),
         'HOST': 'localhost',
         'POSRT': 5432

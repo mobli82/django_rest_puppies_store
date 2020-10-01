@@ -1,5 +1,5 @@
 from django.test import TestCase
-from .models import PuppyModel
+from puppies.models import PuppyModel
 
 class PuppyTest(TestCase):
     """" Test module for Puppy Model"""
